@@ -44,4 +44,12 @@ public class CalendarAdapter {
 		Date d = new Date(year-1900,month-1,date);
 		return d;
 	}
+        
+        public static GregorianCalendar SQLDateToCal(java.sql.Date d){
+            if(d==null) return null;
+            String s = SQLDateToString(d);
+            String [] spl = new String[3];
+            spl = s.split("-",3);
+            return new GregorianCalendar(Integer.parseInt(spl[2]),Integer.parseInt(spl[1]),Integer.parseInt(spl[0]));
+        }
 }
