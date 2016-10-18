@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package khachsan.view;
+package project1.nhom2.de14.view;
 
 import javax.swing.JFrame;
 
@@ -334,9 +334,9 @@ public class MainGUI extends javax.swing.JFrame {
     private void btnBaoCaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBaoCaoActionPerformed
         // TODO add your handling code here:
         if (evt.getSource() == btnBaoCao) {
-            BaoCao bc = new BaoCao();
-            bc.setVisible(true);
-            this.dispose();
+//            BaoCao bc = new BaoCao();
+//            bc.setVisible(true);
+//            this.dispose();
         }
     }//GEN-LAST:event_btnBaoCaoActionPerformed
 
