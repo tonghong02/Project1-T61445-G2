@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package QuanLyKhachSan;
+package project1.nhom2.de14.model;
 
 /**
  *
@@ -14,6 +14,9 @@ public class KhachHang {
     private String tenKH;
     private String soCMND;
     private String gioiTinh;
+    private String diaChi;
+    private String quocTich;
+    private String SDT;
 
     public String getMaKH() {
         return maKH;
@@ -70,8 +73,4 @@ public class KhachHang {
     public void setSDT(String SDT) {
         this.SDT = SDT;
     }
-    private String diaChi;
-    private String quocTich;
-    private String SDT;
-    
 }

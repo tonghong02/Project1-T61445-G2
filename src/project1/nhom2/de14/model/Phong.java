@@ -1,7 +1,7 @@
-package QuanLyKhachSan;
+package project1.nhom2.de14.model;
 
 
-public class phong {
+public class Phong {
     
     private String maP;
     private String loaiPhong;

@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package QuanLyKhachSan;
+package project1.nhom2.de14.util;
 
 import java.io.File;
 import java.io.IOException;
@@ -26,13 +26,8 @@ import jxl.write.WriteException;
  */
 public class WriteRead {
 
-    public void read() {
+    public void read(String fileName) {
         Workbook workbook;
-        String fileName = "C:\\Users\\LeThanhLoi\\Desktop\\";
-        Scanner scan = new Scanner(System.in);
-        System.out.println("Nhap ten file: ");
-        String st = scan.nextLine();
-        fileName = fileName + st + ".xls";
 
         try {
             workbook = Workbook.getWorkbook(new File(fileName));
@@ -66,8 +61,7 @@ public class WriteRead {
 
     }
 
-    public void write(String table) {
-        String fileName = "C:\\Users\\LeThanhLoi\\Desktop\\";
+    public void write(String table, String fileName) {
         ConnectDB conn = new ConnectDB();
         conn.connect("quanlykhachsan", "root", "dragonball");
         
@@ -167,8 +161,8 @@ public class WriteRead {
         WriteRead wr= new WriteRead();
         Scanner scan= new Scanner(System.in);
         System.out.println("Nhap ten table : ");
-        String table= scan.nextLine();
-        wr.write(table);
+        String table = scan.nextLine();
+        //wr.write(table);
         //wr.read();
     }
 }

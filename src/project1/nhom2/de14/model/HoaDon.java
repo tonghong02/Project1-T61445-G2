@@ -1,10 +1,10 @@
 
-package QuanLyKhachSan;
+package project1.nhom2.de14.model;
 
 
 public class HoaDon {
     private String maHD;
-    private String maDatHang;
+    private String maDatPhong;
     private String thoiGianThanhToan;
     private String tienPhong;
     private String tienDichvu;
@@ -18,11 +18,11 @@ public class HoaDon {
     }
 
     public String getMaDatHang() {
-        return maDatHang;
+        return maDatPhong;
     }
 
-    public void setMaDatHang(String maDatHang) {
-        this.maDatHang = maDatHang;
+    public void setMaDatHang(String maDatPhong) {
+        this.maDatPhong = maDatPhong;
     }
 
     public String getThoiGianThanhToan() {

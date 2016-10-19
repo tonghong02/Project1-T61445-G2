@@ -1,5 +1,5 @@
 
-package QuanLyKhachSan;
+package project1.nhom2.de14.model;
 
 public class ChiTietDichVu {
     private String maPhong;
