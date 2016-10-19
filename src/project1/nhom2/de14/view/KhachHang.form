@@ -348,7 +348,7 @@
                       <Font name="Dialog" size="14" style="0"/>
                     </Property>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/images/add (1).png"/>
+                      <Image iconType="3" name="/project1/nhom2/de14/images/add (1).png"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Th&#xea;m"/>
                     <Property name="horizontalAlignment" type="int" value="2"/>
@@ -360,7 +360,7 @@
                       <Font name="Dialog" size="14" style="0"/>
                     </Property>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/images/edit.png"/>
+                      <Image iconType="3" name="/project1/nhom2/de14/images/edit.png"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="S&#x1eed;a"/>
                     <Property name="horizontalAlignment" type="int" value="2"/>
@@ -372,7 +372,7 @@
                       <Font name="Dialog" size="14" style="0"/>
                     </Property>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/images/garbage.png"/>
+                      <Image iconType="3" name="/project1/nhom2/de14/images/garbage.png"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="X&#xf3;a"/>
                     <Property name="horizontalAlignment" type="int" value="2"/>
@@ -452,7 +452,7 @@
                   <Font name="Dialog" size="14" style="0"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/search.png"/>
+                  <Image iconType="3" name="/project1/nhom2/de14/images/search.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="T&#xec;m ki&#x1ebf;m"/>
               </Properties>
@@ -515,7 +515,7 @@
               <Font name="Dialog" size="14" style="0"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/images/backk.png"/>
+              <Image iconType="3" name="/project1/nhom2/de14/images/backk.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Quay l&#x1ea1;i "/>
           </Properties>

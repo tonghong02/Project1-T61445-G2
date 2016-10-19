@@ -26,8 +26,9 @@ public class Phong extends javax.swing.JFrame {
      * @throws java.sql.SQLException
      */
     public Phong() throws SQLException {
-        try {
-            initComponents();
+        initComponents();
+        /*try {
+        
             DBConnnection.open();
             Statement state = DBConnnection.con.createStatement(); // tao kha nang xu ly cac cau lenh sql
             ResultSet rs = state.executeQuery("SELECT * FROM Phong"); // thuc hien viec truy van
@@ -57,7 +58,7 @@ public class Phong extends javax.swing.JFrame {
             Logger.getLogger(DataTable.class.getName()).log(Level.SEVERE, null, ex);
         } finally {
             DBConnnection.close();
-        }
+        }*/
     }
 
     /**
@@ -109,7 +110,7 @@ public class Phong extends javax.swing.JFrame {
 
         jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Tìm kiếm thông tin phòng", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Dialog", 0, 14))); // NOI18N
 
-        btnTimKiem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/search.png"))); // NOI18N
+        btnTimKiem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/project1/nhom2/de14/images/search.png"))); // NOI18N
         btnTimKiem.setText("Tìm kiếm");
 
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
@@ -168,7 +169,7 @@ public class Phong extends javax.swing.JFrame {
                 .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(29, 29, 29)
                 .addComponent(jLabel7)
-                .addContainerGap(41, Short.MAX_VALUE))
+                .addContainerGap(43, Short.MAX_VALUE))
         );
 
         jPanel3Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jLabel6, jLabel7});
@@ -238,15 +239,15 @@ public class Phong extends javax.swing.JFrame {
 
         jPanel5Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {tfLoaiPhong, tfMaPhong, tfMucGia, tfTrangThai});
 
-        btnThem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/add (1).png"))); // NOI18N
+        btnThem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/project1/nhom2/de14/images/add (1).png"))); // NOI18N
         btnThem.setText("Thêm");
         btnThem.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
 
-        btnSua.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/edit.png"))); // NOI18N
+        btnSua.setIcon(new javax.swing.ImageIcon(getClass().getResource("/project1/nhom2/de14/images/edit.png"))); // NOI18N
         btnSua.setText("Sửa");
         btnSua.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
 
-        btnXoa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/garbage.png"))); // NOI18N
+        btnXoa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/project1/nhom2/de14/images/garbage.png"))); // NOI18N
         btnXoa.setText("Xóa");
         btnXoa.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
 
@@ -337,7 +338,7 @@ public class Phong extends javax.swing.JFrame {
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addGap(0, 23, Short.MAX_VALUE)
+                .addGap(0, 3, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(jPanel2Layout.createSequentialGroup()
@@ -359,7 +360,7 @@ public class Phong extends javax.swing.JFrame {
         );
 
         btnQuayLai.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
-        btnQuayLai.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/back.png"))); // NOI18N
+        btnQuayLai.setIcon(new javax.swing.ImageIcon(getClass().getResource("/project1/nhom2/de14/images/backk.png"))); // NOI18N
         btnQuayLai.setText("Quay lại");
         btnQuayLai.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

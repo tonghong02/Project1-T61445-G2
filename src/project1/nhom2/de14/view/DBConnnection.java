@@ -3,11 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package khachsan.view;
+package project1.nhom2.de14.view;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
-import static java.sql.JDBCType.NULL;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;

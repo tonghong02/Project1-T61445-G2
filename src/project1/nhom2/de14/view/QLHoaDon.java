@@ -81,28 +81,18 @@ public class QLHoaDon extends javax.swing.JFrame {
         jLabel6.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         jLabel6.setText("Tiền phòng :");
 
-        jTextField2.setText("jTextField2");
-
-        jTextField3.setText("jTextField2");
-
-        jTextField4.setText("jTextField2");
-
-        jTextField5.setText("jTextField2");
-
-        jTextField6.setText("jTextField2");
-
         jButton2.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/add (1).png"))); // NOI18N
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/project1/nhom2/de14/images/add (1).png"))); // NOI18N
         jButton2.setText("Thêm");
         jPanel5.add(jButton2);
 
         jButton3.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/edit.png"))); // NOI18N
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/project1/nhom2/de14/images/edit.png"))); // NOI18N
         jButton3.setText("Sửa");
         jPanel5.add(jButton3);
 
         jButton4.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
-        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/garbage.png"))); // NOI18N
+        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/project1/nhom2/de14/images/garbage.png"))); // NOI18N
         jButton4.setText("Xóa");
         jPanel5.add(jButton4);
 
@@ -184,7 +174,7 @@ public class QLHoaDon extends javax.swing.JFrame {
         jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Tìm  kiếm thông tin", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Dialog", 0, 14))); // NOI18N
 
         jButton1.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/search.png"))); // NOI18N
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/project1/nhom2/de14/images/search.png"))); // NOI18N
         jButton1.setText("Tìm kiếm");
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
@@ -238,7 +228,7 @@ public class QLHoaDon extends javax.swing.JFrame {
         );
 
         btnQuayLai.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
-        btnQuayLai.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/backk.png"))); // NOI18N
+        btnQuayLai.setIcon(new javax.swing.ImageIcon(getClass().getResource("/project1/nhom2/de14/images/backk.png"))); // NOI18N
         btnQuayLai.setText("Quay lại");
         btnQuayLai.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

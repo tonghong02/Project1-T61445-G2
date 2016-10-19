@@ -193,7 +193,7 @@ public class ThongKe extends javax.swing.JFrame {
         );
 
         btnQuayLai1.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
-        btnQuayLai1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/backk.png"))); // NOI18N
+        btnQuayLai1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/project1/nhom2/de14/images/backk.png"))); // NOI18N
         btnQuayLai1.setText("Quay lại");
         btnQuayLai1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -203,7 +203,7 @@ public class ThongKe extends javax.swing.JFrame {
         jPanel10.add(btnQuayLai1);
 
         jButton2.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/print.png"))); // NOI18N
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/project1/nhom2/de14/images/print.png"))); // NOI18N
         jButton2.setText("In biểu mẫu");
         jPanel10.add(jButton2);
 
@@ -324,7 +324,7 @@ public class ThongKe extends javax.swing.JFrame {
         );
 
         btnQuayLai2.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
-        btnQuayLai2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/backk.png"))); // NOI18N
+        btnQuayLai2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/project1/nhom2/de14/images/backk.png"))); // NOI18N
         btnQuayLai2.setText("Quay lại");
         btnQuayLai2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -334,7 +334,7 @@ public class ThongKe extends javax.swing.JFrame {
         jPanel12.add(btnQuayLai2);
 
         jButton4.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
-        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/print.png"))); // NOI18N
+        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/project1/nhom2/de14/images/print.png"))); // NOI18N
         jButton4.setText("In biểu mẫu");
         jPanel12.add(jButton4);
 
@@ -455,7 +455,7 @@ public class ThongKe extends javax.swing.JFrame {
         );
 
         btnQuayLai3.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
-        btnQuayLai3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/backk.png"))); // NOI18N
+        btnQuayLai3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/project1/nhom2/de14/images/backk.png"))); // NOI18N
         btnQuayLai3.setText("Quay lại");
         btnQuayLai3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -465,7 +465,7 @@ public class ThongKe extends javax.swing.JFrame {
         jPanel14.add(btnQuayLai3);
 
         jButton6.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
-        jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/print.png"))); // NOI18N
+        jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/project1/nhom2/de14/images/print.png"))); // NOI18N
         jButton6.setText("In biểu mẫu ");
         jPanel14.add(jButton6);
 
@@ -581,7 +581,7 @@ public class ThongKe extends javax.swing.JFrame {
         );
 
         btnQuayLai4.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
-        btnQuayLai4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/backk.png"))); // NOI18N
+        btnQuayLai4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/project1/nhom2/de14/images/backk.png"))); // NOI18N
         btnQuayLai4.setText("Quay lại");
         btnQuayLai4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -591,7 +591,7 @@ public class ThongKe extends javax.swing.JFrame {
         jPanel16.add(btnQuayLai4);
 
         jButton8.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
-        jButton8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/print.png"))); // NOI18N
+        jButton8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/project1/nhom2/de14/images/print.png"))); // NOI18N
         jButton8.setText("In biểu mẫu ");
         jPanel16.add(jButton8);
 
@@ -682,7 +682,7 @@ public class ThongKe extends javax.swing.JFrame {
         jPanel17Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jLabel40, jLabel41, jLabel42, jLabel43, jLabel45, jLabel47});
 
         btnQuayLai5.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
-        btnQuayLai5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/backk.png"))); // NOI18N
+        btnQuayLai5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/project1/nhom2/de14/images/backk.png"))); // NOI18N
         btnQuayLai5.setText("Quay lại");
         btnQuayLai5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -692,7 +692,7 @@ public class ThongKe extends javax.swing.JFrame {
         jPanel18.add(btnQuayLai5);
 
         jButton10.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
-        jButton10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/print.png"))); // NOI18N
+        jButton10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/project1/nhom2/de14/images/print.png"))); // NOI18N
         jButton10.setText("In biểu mẫu");
         jPanel18.add(jButton10);
 
