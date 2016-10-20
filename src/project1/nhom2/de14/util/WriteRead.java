@@ -26,9 +26,9 @@ import jxl.write.WriteException;
  */
 public class WriteRead {
 
-    public void read(String fileName) {
+    public static Vector<String> read(String fileName) {
         Workbook workbook;
-
+        Vector<String> result = new Vector<String>(100);
         try {
             workbook = Workbook.getWorkbook(new File(fileName));
             Sheet sheet = workbook.getSheet(0);
@@ -39,18 +39,21 @@ public class WriteRead {
             System.out.println("Data in file: ");
 
             for (int row = 0; row < rows; row++) {
+                String s = new String();
                 int dem = 0;
                 for (int col = 0; col < cols; col++) {
                     Cell cell = sheet.getCell(col, row);
+                    s += cell.getContents();
                     System.out.print(cell.getContents() + "\t");
                     if (dem == cols - 1) {
                         System.out.println("\n");
                         break;
                     } else {
+                        s += "\t";
                         dem++;
                     }
                 }
-
+                result.add(new String(s));
             }
             workbook.close();
         } catch (IOException ex) {
@@ -58,24 +61,11 @@ public class WriteRead {
         } catch (BiffException ex) {
             Logger.getLogger(WriteRead.class.getName()).log(Level.SEVERE, null, ex);
         }
+        return result;
 
     }
 
-    public void write(String table, String fileName) {
-        ConnectDB conn = new ConnectDB();
-        conn.connect("quanlykhachsan", "root", "dragonball");
-        
-        
-        Scanner scan = new Scanner(System.in);
-        System.out.println("Nhap ten file: "); 
-        String st = scan.nextLine();
-        fileName = fileName + st + ".xls";
-        
-        Vector<String> vector = new Vector<String>(100);
-        vector = conn.select(table, null);
-        System.out.println(vector);
-        
-
+    public static void write(Vector<String> vector, String table, String fileName) {
         WritableWorkbook workbook;
 
         String[][] str = new String[vector.size()][];

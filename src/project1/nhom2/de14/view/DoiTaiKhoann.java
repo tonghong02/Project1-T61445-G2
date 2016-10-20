@@ -180,7 +180,7 @@ public class DoiTaiKhoann extends javax.swing.JFrame {
     private void btnQuayLaiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnQuayLaiActionPerformed
         // TODO add your handling code here:
         if(evt.getSource() == btnQuayLai){
-            QuanLyTaiKhoan qltk = new QuanLyTaiKhoan();
+            GUIQuanLyTaiKhoan qltk = new GUIQuanLyTaiKhoan();
             qltk.setVisible(true);
             this.dispose();
         }

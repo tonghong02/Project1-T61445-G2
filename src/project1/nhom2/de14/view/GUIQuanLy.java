@@ -14,12 +14,12 @@ import javax.swing.JFrame;
  *
  * @author dell
  */
-public class QuanLy extends javax.swing.JFrame {
+public class GUIQuanLy extends javax.swing.JFrame {
 
     /**
      * Creates new form QuanLy
      */
-    public QuanLy() {
+    public GUIQuanLy() {
         initComponents();
     }
 
@@ -242,14 +242,9 @@ public class QuanLy extends javax.swing.JFrame {
     private void btnPhongActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPhongActionPerformed
         // TODO add your handling code here:
         if(evt.getSource() == btnPhong){
-            Phong p;
-            try {
-                p = new Phong();
-                p.setVisible(true);
-            } catch (SQLException ex) {
-                Logger.getLogger(QuanLy.class.getName()).log(Level.SEVERE, null, ex);
-            }
-            
+            GUIPhong p;
+            p = new GUIPhong();
+            p.setVisible(true);
             this.dispose();
         }
     }//GEN-LAST:event_btnPhongActionPerformed
@@ -257,8 +252,8 @@ public class QuanLy extends javax.swing.JFrame {
     private void btnNhanVienActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNhanVienActionPerformed
         // TODO add your handling code here:
         if(evt.getSource() == btnNhanVien){
-            NhanVien nv;
-            nv = new NhanVien();
+            GUINhanVien nv;
+            nv = new GUINhanVien();
             nv.setVisible(true);
             
             this.dispose();
@@ -268,7 +263,7 @@ public class QuanLy extends javax.swing.JFrame {
     private void btnDichVuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDichVuActionPerformed
         // TODO add your handling code here:
         if(evt.getSource() == btnDichVu){
-            DichVu dv = new DichVu();
+            GUIDichVu dv = new GUIDichVu();
            
             dv.setVisible(true);
             
@@ -279,7 +274,7 @@ public class QuanLy extends javax.swing.JFrame {
     private void btnKhachHangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKhachHangActionPerformed
         // TODO add your handling code here:
         if(evt.getSource() == btnKhachHang){
-            KhachHang kh = new KhachHang();
+            GUIKhachHang kh = new GUIKhachHang();
             kh.setVisible(true);
             this.dispose();
         }
@@ -288,7 +283,7 @@ public class QuanLy extends javax.swing.JFrame {
     private void btnDatPhongActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDatPhongActionPerformed
         // TODO add your handling code here:
         if(evt.getSource() == btnDatPhong){
-            DatPhong dp = new DatPhong();
+            GUIDatPhong dp = new GUIDatPhong();
             dp.setVisible(true);
             this.dispose();
         }
@@ -297,7 +292,7 @@ public class QuanLy extends javax.swing.JFrame {
     private void btnHoaDonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHoaDonActionPerformed
         // TODO add your handling code here:
         if(evt.getSource() == btnHoaDon){
-            QLHoaDon hd = new QLHoaDon();
+            GUIQLHoaDon hd = new GUIQLHoaDon();
             hd.setVisible(true);
             this.dispose();
         }
@@ -329,20 +324,21 @@ public class QuanLy extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(QuanLy.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(GUIQuanLy.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(QuanLy.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(GUIQuanLy.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(QuanLy.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(GUIQuanLy.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(QuanLy.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(GUIQuanLy.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                QuanLy quanLy = new QuanLy();
+                GUIQuanLy quanLy = new GUIQuanLy();
                 quanLy.setSize(1024, 768);
                 quanLy.setResizable(false);
                 quanLy.setLocationRelativeTo(null);

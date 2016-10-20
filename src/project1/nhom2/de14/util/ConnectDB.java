@@ -123,7 +123,7 @@ public class ConnectDB {
 
     
     //  insert values vao trong table
-    public void insert(String table, String[] values) {
+    public boolean insert(String table, String[] values) {
 
         try {
             
@@ -153,13 +153,14 @@ public class ConnectDB {
             pst.executeUpdate();
         } catch (SQLException ex) {
             Logger.getLogger(ConnectDB.class.getName()).log(Level.SEVERE, null, ex);
+            return false;
         }
-
+        return true;
     }
 
     
     //xoa column co gia tri la key trong bang table
-    public void delete(String table, String column, String key) {
+    public boolean delete(String table, String column, String key) {
         try {
             
             String sqlcommand = " delete from " + table + " where " + column + " ='"  +key+ "';";
@@ -170,18 +171,20 @@ public class ConnectDB {
             pst.executeUpdate(); 
         } catch (SQLException ex) {
             Logger.getLogger(ConnectDB.class.getName()).log(Level.SEVERE, null, ex);
+            return false;
         }
+        return true;
     }
 
     //Update trong bang table nhung record co column= key
-    public void update(String table, String[] values, String key) {
+    public boolean update(String table, String[] values, String key) {
         try {
            
-            String sqlcommand = " update " + table;
+            String sqlcommand = " update " + table + " set ";
             PreparedStatement pst = null;
                   
             for (int i = 0; i < values.length; i++) {
-                sqlcommand += " set " + values[i];
+                sqlcommand += values[i];
                 if (i < values.length - 1) {
                   sqlcommand += ",";
                 }
@@ -193,10 +196,16 @@ public class ConnectDB {
             pst.executeUpdate();
         } catch (SQLException ex) {
             Logger.getLogger(ConnectDB.class.getName()).log(Level.SEVERE, null, ex);
+            return false;
         }
-       
+        return true;
     }
-
     
-   
+    public void close(){
+        try {
+            connection.close();
+        } catch (SQLException ex) {
+            Logger.getLogger(ConnectDB.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
 }

@@ -307,7 +307,7 @@ public class MainGUI extends javax.swing.JFrame {
     private void btnQuanLyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnQuanLyActionPerformed
         // TODO add your handling code here:
         if (evt.getSource() == btnQuanLy) {
-            QuanLy ql = new QuanLy();
+            GUIQuanLy ql = new GUIQuanLy();
             ql.setVisible(true);
             this.dispose();
         }
@@ -316,7 +316,7 @@ public class MainGUI extends javax.swing.JFrame {
     private void btnThongKeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnThongKeActionPerformed
         // TODO add your handling code here:
         if (evt.getSource() == btnThongKe) {
-            ThongKe tk = new ThongKe();
+            GUIThongKe tk = new GUIThongKe();
             tk.setVisible(true);
             this.dispose();
         }
