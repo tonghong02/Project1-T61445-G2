@@ -18,6 +18,18 @@ public class KhachHang {
     private String quocTich;
     private String SDT;
 
+    public KhachHang(String record){
+        String [] values = new String[7];
+        values = record.split("\t",7);
+        maKH = values[0];
+        tenKH = values[1];
+        soCMND = values[2];
+        gioiTinh = values[3];
+        diaChi = values[4];
+        quocTich = values[5];
+        SDT = values[6];
+    }
+    
     public String getMaKH() {
         return maKH;
     }
@@ -72,5 +84,19 @@ public class KhachHang {
 
     public void setSDT(String SDT) {
         this.SDT = SDT;
+    }
+    
+    public String[] getValues(){
+        String [] values = new String[7];
+        
+        values[0] = maKH;
+        values[1] = tenKH;
+        values[2] = soCMND;
+        values[3] = gioiTinh;
+        values[4] = diaChi;
+        values[5] = quocTich;
+        values[6] = SDT;
+        
+        return values;
     }
 }

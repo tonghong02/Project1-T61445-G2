@@ -107,7 +107,6 @@ public class CPhong {
     }
     
     public Object[][] getTableData(){
-        int size;
         if(DS==null)
             return new Object[0][4];
         Object[][] data = new Object[DS.size()][4];

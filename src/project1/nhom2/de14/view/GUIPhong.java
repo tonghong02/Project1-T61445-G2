@@ -6,10 +6,7 @@
 package project1.nhom2.de14.view;
 
 import java.io.File;
-import java.sql.SQLException;
 import java.util.Vector;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.JFileChooser;
 import javax.swing.JFrame;
 import javax.swing.event.ListSelectionEvent;
@@ -511,7 +508,6 @@ public class GUIPhong extends javax.swing.JFrame {
                 Vector<String> rows = control.addFile(file.getPath());
                 
                 for(String s : rows){
-                    System.out.println(s);
                     dtm.addRow(s.split("\t"));
                 }
             }
