@@ -70,7 +70,7 @@ public class ConnectDB {
                 case "nhanvien":
                     while (rs.next()) {
 
-                        vector.add(rs.getString(1) + "\t" + rs.getString(2) +"\t" + rs.getString(3) + "\t" + rs.getString(4)
+                        vector.add(rs.getString(1) + "\t" + rs.getString(2) +"\t" + CalendarAdapter.SQLDateToString(rs.getDate(3)) + "\t" + rs.getString(4)
                                 + "\t" + rs.getString(5) + "\t"+ rs.getString(6) +"\t" + rs.getString(7) +"\t" + rs.getString(8));
                     }
                 case "khachhang":
