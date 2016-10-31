@@ -10,40 +10,62 @@ package project1.nhom2.de14.model;
  * @author LeThanhLoi
  */
 public class DichVu {
-    private String maDV;
-    private String tenDV;
-    private String donGia;
-    private String maNVPhuTrach;
 
-    public String getMaDV() {
-        return maDV;
-    }
+	private String maDV;
+	private String tenDV;
+	private double donGia;
+	private String maNVPhuTrach;
 
-    public void setMaDV(String maDV) {
-        this.maDV = maDV;
-    }
+	public DichVu(String record){
+		String [] s = new String[4];
+		s = record.split("\t", 4);
+		
+		maDV = s[0];
+		tenDV = s[1];
+		donGia = Double.parseDouble(s[2]);
+		maNVPhuTrach = s[3];
+	}
+	
+	public String getMaDV() {
+		return maDV;
+	}
 
-    public String getTenDV() {
-        return tenDV;
-    }
+	public void setMaDV(String maDV) {
+		this.maDV = maDV;
+	}
 
-    public void setTenDV(String tenDV) {
-        this.tenDV = tenDV;
-    }
+	public String getTenDV() {
+		return tenDV;
+	}
 
-    public String getDonGia() {
-        return donGia;
-    }
+	public void setTenDV(String tenDV) {
+		this.tenDV = tenDV;
+	}
 
-    public void setDonGia(String donGia) {
-        this.donGia = donGia;
-    }
+	public double getDonGia() {
+		return donGia;
+	}
 
-    public String getMaNVPhuTrach() {
-        return maNVPhuTrach;
-    }
+	public void setDonGia(double donGia) {
+		this.donGia = donGia;
+	}
 
-    public void setMaNVPhuTrach(String maNVPhuTrach) {
-        this.maNVPhuTrach = maNVPhuTrach;
-    }
+	public String getMaNVPhuTrach() {
+		return maNVPhuTrach;
+	}
+
+	public void setMaNVPhuTrach(String maNVPhuTrach) {
+		this.maNVPhuTrach = maNVPhuTrach;
+	}
+	
+	public String[] getValues(){
+		String [] values = new String[4];
+		
+		values[0] = maDV;
+		values[1] = tenDV;
+		values[2] = Double.toString(donGia);
+		values[3] = maNVPhuTrach;
+		
+		return values;
+	}
 }
