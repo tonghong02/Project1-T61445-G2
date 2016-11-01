@@ -10,22 +10,40 @@ package project1.nhom2.de14.model;
  * @author LeThanhLoi
  */
 public class ChiTietDatPhong {
-    private String maDatHang;
-    private String maPhong;
 
-    public String getMaDatHang() {
-        return maDatHang;
-    }
+	private String maDatPhong;
+	private String maPhong;
+	
+	public ChiTietDatPhong(String record){
+		String [] s = new String[2];
+		s = record.split("\t",2);
+		
+		maDatPhong = s[0];
+		maPhong = s[1];
+	}
 
-    public void setMaDatHang(String maDatHang) {
-        this.maDatHang = maDatHang;
-    }
+	public String getMaDatPhong() {
+		return maDatPhong;
+	}
 
-    public String getMaPhong() {
-        return maPhong;
-    }
+	public void setMaDatPhong(String maDatPhong) {
+		this.maDatPhong = maDatPhong;
+	}
 
-    public void setMaPhong(String maPhong) {
-        this.maPhong = maPhong;
-    }
+	public String getMaPhong() {
+		return maPhong;
+	}
+
+	public void setMaPhong(String maPhong) {
+		this.maPhong = maPhong;
+	}
+
+	public String[] getValues(){
+		String [] values = new String[2];
+		
+		values[0] = maDatPhong;
+		values[1] = maPhong;
+		
+		return values;
+	}
 }
