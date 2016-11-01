@@ -27,7 +27,7 @@ public class CDatPhong {
 
 		String[] key = null;
 
-		Vector<String> vec = conn.select("nhanvien", key);
+		Vector<String> vec = conn.select("datphong", key);
 		for (String s : vec) {
 			DS.add(new DatPhong(s));
 		}
