@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package khachsan.view;
+package project1.nhom2.de14.view;
 
 import javax.swing.JFrame;
 
@@ -61,7 +61,7 @@ public class MainGUI extends javax.swing.JFrame {
         jPanel3.setBackground(new java.awt.Color(153, 153, 153));
 
         jLabel2.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/management.png"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/project1/nhom2/de14/images/management.png"))); // NOI18N
         jLabel2.setText("jLabel2");
 
         btnHeThong.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
@@ -96,7 +96,7 @@ public class MainGUI extends javax.swing.JFrame {
 
         jPanel4.setBackground(new java.awt.Color(153, 153, 153));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/manager.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/project1/nhom2/de14/images/manager.png"))); // NOI18N
         jLabel1.setText("jLabel1");
 
         btnQuanLy.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
@@ -149,7 +149,7 @@ public class MainGUI extends javax.swing.JFrame {
             }
         });
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/thongkee.png"))); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/project1/nhom2/de14/images/thongkee.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
@@ -189,7 +189,7 @@ public class MainGUI extends javax.swing.JFrame {
             }
         });
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/reporting.png"))); // NOI18N
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/project1/nhom2/de14/images/reporting.png"))); // NOI18N
         jLabel4.setText("jLabel4");
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
@@ -257,7 +257,7 @@ public class MainGUI extends javax.swing.JFrame {
                 .addContainerGap(28, Short.MAX_VALUE))
         );
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/3d-building.png"))); // NOI18N
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/project1/nhom2/de14/images/3d-building.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -269,7 +269,7 @@ public class MainGUI extends javax.swing.JFrame {
                         .addGap(433, 433, 433)
                         .addComponent(jLabel5))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(279, 279, 279)
+                        .addGap(267, 267, 267)
                         .addComponent(lQuanLyKhachSan, javax.swing.GroupLayout.PREFERRED_SIZE, 442, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(25, 25, 25)
@@ -307,7 +307,7 @@ public class MainGUI extends javax.swing.JFrame {
     private void btnQuanLyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnQuanLyActionPerformed
         // TODO add your handling code here:
         if (evt.getSource() == btnQuanLy) {
-            QuanLy ql = new QuanLy();
+            GUIQuanLy ql = new GUIQuanLy();
             ql.setVisible(true);
             this.dispose();
         }
@@ -316,7 +316,7 @@ public class MainGUI extends javax.swing.JFrame {
     private void btnThongKeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnThongKeActionPerformed
         // TODO add your handling code here:
         if (evt.getSource() == btnThongKe) {
-            ThongKe tk = new ThongKe();
+            GUIThongKe tk = new GUIThongKe();
             tk.setVisible(true);
             this.dispose();
         }
@@ -334,9 +334,9 @@ public class MainGUI extends javax.swing.JFrame {
     private void btnBaoCaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBaoCaoActionPerformed
         // TODO add your handling code here:
         if (evt.getSource() == btnBaoCao) {
-            BaoCao bc = new BaoCao();
-            bc.setVisible(true);
-            this.dispose();
+//            BaoCao bc = new BaoCao();
+//            bc.setVisible(true);
+//            this.dispose();
         }
     }//GEN-LAST:event_btnBaoCaoActionPerformed
 

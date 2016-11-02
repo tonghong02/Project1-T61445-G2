@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package khachsan.view;
+package project1.nhom2.de14.view;
 
 import javax.swing.JFrame;
 
@@ -11,12 +11,12 @@ import javax.swing.JFrame;
  *
  * @author dell
  */
-public class KhachHang extends javax.swing.JFrame {
+public class GUIKhachHang extends javax.swing.JFrame {
 
     /**
      * Creates new form KhachHang
      */
-    public KhachHang() {
+    public GUIKhachHang() {
         initComponents();
     }
 
@@ -119,17 +119,17 @@ public class KhachHang extends javax.swing.JFrame {
         jLabel9.setText("Địa chỉ : ");
 
         btnThem.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
-        btnThem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/add (1).png"))); // NOI18N
+        btnThem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/project1/nhom2/de14/images/add (1).png"))); // NOI18N
         btnThem.setText("Thêm");
         btnThem.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
 
         btnSua.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
-        btnSua.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/edit.png"))); // NOI18N
+        btnSua.setIcon(new javax.swing.ImageIcon(getClass().getResource("/project1/nhom2/de14/images/edit.png"))); // NOI18N
         btnSua.setText("Sửa");
         btnSua.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
 
         btnXoa.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
-        btnXoa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/garbage.png"))); // NOI18N
+        btnXoa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/project1/nhom2/de14/images/garbage.png"))); // NOI18N
         btnXoa.setText("Xóa");
         btnXoa.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
 
@@ -247,7 +247,7 @@ public class KhachHang extends javax.swing.JFrame {
         jLabel2.setText("Tìm kiếm khách hàng");
 
         jButton1.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/search.png"))); // NOI18N
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/project1/nhom2/de14/images/search.png"))); // NOI18N
         jButton1.setText("Tìm kiếm");
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
@@ -314,7 +314,7 @@ public class KhachHang extends javax.swing.JFrame {
         );
 
         btnQuayLai.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
-        btnQuayLai.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/backk.png"))); // NOI18N
+        btnQuayLai.setIcon(new javax.swing.ImageIcon(getClass().getResource("/project1/nhom2/de14/images/backk.png"))); // NOI18N
         btnQuayLai.setText("Quay lại ");
         btnQuayLai.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -368,7 +368,7 @@ public class KhachHang extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1024, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 1024, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -383,7 +383,7 @@ public class KhachHang extends javax.swing.JFrame {
     private void btnQuayLaiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnQuayLaiActionPerformed
         // TODO add your handling code here:
          if(evt.getSource() == btnQuayLai){
-            QuanLy ql = new QuanLy();
+            GUIQuanLy ql = new GUIQuanLy();
             ql.setVisible(true);
             this.dispose();
         }
@@ -407,20 +407,21 @@ public class KhachHang extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(KhachHang.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(GUIKhachHang.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(KhachHang.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(GUIKhachHang.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(KhachHang.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(GUIKhachHang.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(KhachHang.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(GUIKhachHang.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                KhachHang khachHang = new KhachHang();
+                GUIKhachHang khachHang = new GUIKhachHang();
                 khachHang.setSize(1024, 768);
                 khachHang.setResizable(false);
                 khachHang.setLocationRelativeTo(null);

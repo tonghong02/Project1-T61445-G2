@@ -3,61 +3,69 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package khachsan.view;
+package project1.nhom2.de14.view;
 
-import java.sql.ResultSet;
-import java.sql.ResultSetMetaData;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.io.File;
 import java.util.Vector;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import javax.swing.JFileChooser;
 import javax.swing.JFrame;
+import javax.swing.event.ListSelectionEvent;
+import javax.swing.event.ListSelectionListener;
+import javax.swing.filechooser.FileNameExtensionFilter;
 import javax.swing.table.DefaultTableModel;
+import project1.nhom2.de14.controller.CPhong;
 
 /**
  *
  * @author dell
  */
-public class Phong extends javax.swing.JFrame {
+public class GUIPhong extends javax.swing.JFrame {
 
     /**
      * Creates new form Phong
      * @throws java.sql.SQLException
      */
-    public Phong() throws SQLException {
-        try {
-            initComponents();
-            DBConnnection.open();
-            Statement state = DBConnnection.con.createStatement(); // tao kha nang xu ly cac cau lenh sql
-            ResultSet rs = state.executeQuery("SELECT * FROM Phong"); // thuc hien viec truy van
-
-            ResultSetMetaData rsmetadata = rs.getMetaData();
-            int col = rsmetadata.getColumnCount();
-            DefaultTableModel dtm = new DefaultTableModel(); // doi tuong de chuyen DL vao trong table
-            Vector<String> colName = new Vector<String>();
-            Vector dataRows = new Vector();
-
-            for (int i = 1; i < col; i++) {
-                colName.addElement(rsmetadata.getColumnName(i)); // lay ten cot trong bang DL
+    CPhong control;
+    DefaultTableModel dtm;
+            
+    public GUIPhong(){
+        initComponents();
+        control = new CPhong("ngoclan","serenity");
+        String[] colName = {"Mã phòng", "Loại phòng", "Mức giá", "Trạng thái"};
+        dtm = new DefaultTableModel(control.getTableData(), colName);
+        this.tbPhong.setModel(dtm);
+        
+        tbPhong.getSelectionModel().addListSelectionListener(new ListSelectionListener(){
+        @Override
+        public void valueChanged(ListSelectionEvent event) {
+            int selected = tbPhong.getSelectedRow();
+            if(selected<0){
+                tfMaPhong.setText("");
+                tfLoaiPhong.setText("");
+                tfMucGia.setText("");
+                tfTrangThai.setText("");
+                return;
             }
-
-            dtm.setColumnIdentifiers(colName);
-
-            while (rs.next()) {
-                dataRows = new Vector();
-                for (int j = 1; j < col; j++) {
-                    dataRows.addElement(rs.getString(j)); // Lay DL cua tung ban ghi trong CSDL
-                }
-                dtm.addRow(dataRows); // CHuyen ban ghi vao doi tuong de luu tru DL chuyen vao table
-                tbPhong.setModel(dtm);
-            }
-
-        } catch (SQLException ex) {
-            Logger.getLogger(DataTable.class.getName()).log(Level.SEVERE, null, ex);
-        } finally {
-            DBConnnection.close();
+            tfMaPhong.setText((String)dtm.getValueAt(selected, 0));
+            tfLoaiPhong.setText((String)dtm.getValueAt(selected, 1));
+            tfMucGia.setText((String)dtm.getValueAt(selected, 2));
+            tfTrangThai.setText((String)dtm.getValueAt(selected, 3));
         }
+    });
+    }
+    
+    private String getFields(){
+        String fields = new String();
+        
+        fields += this.tfMaPhong.getText();
+        fields += "\t";
+        fields += this.tfLoaiPhong.getText();
+        fields += "\t";
+        fields += this.tfMucGia.getText();
+        fields += "\t";
+        fields += this.tfTrangThai.getText();
+        
+        return fields;
     }
 
     /**
@@ -92,6 +100,7 @@ public class Phong extends javax.swing.JFrame {
         btnThem = new javax.swing.JButton();
         btnSua = new javax.swing.JButton();
         btnXoa = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
         jPanel7 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tbPhong = new javax.swing.JTable(){
@@ -109,7 +118,7 @@ public class Phong extends javax.swing.JFrame {
 
         jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Tìm kiếm thông tin phòng", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Dialog", 0, 14))); // NOI18N
 
-        btnTimKiem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/search.png"))); // NOI18N
+        btnTimKiem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/project1/nhom2/de14/images/search.png"))); // NOI18N
         btnTimKiem.setText("Tìm kiếm");
 
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
@@ -168,7 +177,7 @@ public class Phong extends javax.swing.JFrame {
                 .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(29, 29, 29)
                 .addComponent(jLabel7)
-                .addContainerGap(41, Short.MAX_VALUE))
+                .addContainerGap(43, Short.MAX_VALUE))
         );
 
         jPanel3Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jLabel6, jLabel7});
@@ -238,17 +247,39 @@ public class Phong extends javax.swing.JFrame {
 
         jPanel5Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {tfLoaiPhong, tfMaPhong, tfMucGia, tfTrangThai});
 
-        btnThem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/add (1).png"))); // NOI18N
+        btnThem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/project1/nhom2/de14/images/add (1).png"))); // NOI18N
         btnThem.setText("Thêm");
         btnThem.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        btnThem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnThemActionPerformed(evt);
+            }
+        });
 
-        btnSua.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/edit.png"))); // NOI18N
+        btnSua.setIcon(new javax.swing.ImageIcon(getClass().getResource("/project1/nhom2/de14/images/edit.png"))); // NOI18N
         btnSua.setText("Sửa");
         btnSua.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        btnSua.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSuaActionPerformed(evt);
+            }
+        });
 
-        btnXoa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/garbage.png"))); // NOI18N
+        btnXoa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/project1/nhom2/de14/images/garbage.png"))); // NOI18N
         btnXoa.setText("Xóa");
         btnXoa.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        btnXoa.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnXoaActionPerformed(evt);
+            }
+        });
+
+        jButton1.setText("Thêm từ file");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
@@ -256,14 +287,15 @@ public class Phong extends javax.swing.JFrame {
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel6Layout.createSequentialGroup()
                 .addGap(35, 35, 35)
-                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnThem)
-                    .addComponent(btnSua)
-                    .addComponent(btnXoa))
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(btnThem, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnSua, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnXoa, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(41, Short.MAX_VALUE))
         );
 
-        jPanel6Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {btnSua, btnThem, btnXoa});
+        jPanel6Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {btnSua, btnThem, btnXoa, jButton1});
 
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -274,6 +306,8 @@ public class Phong extends javax.swing.JFrame {
                 .addComponent(btnSua)
                 .addGap(18, 18, 18)
                 .addComponent(btnXoa)
+                .addGap(18, 18, 18)
+                .addComponent(jButton1)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -337,7 +371,7 @@ public class Phong extends javax.swing.JFrame {
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addGap(0, 23, Short.MAX_VALUE)
+                .addGap(0, 0, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(jPanel2Layout.createSequentialGroup()
@@ -359,7 +393,7 @@ public class Phong extends javax.swing.JFrame {
         );
 
         btnQuayLai.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
-        btnQuayLai.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/back.png"))); // NOI18N
+        btnQuayLai.setIcon(new javax.swing.ImageIcon(getClass().getResource("/project1/nhom2/de14/images/backk.png"))); // NOI18N
         btnQuayLai.setText("Quay lại");
         btnQuayLai.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -411,11 +445,74 @@ public class Phong extends javax.swing.JFrame {
     private void btnQuayLaiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnQuayLaiActionPerformed
         // TODO add your handling code here:
         if(evt.getSource() == btnQuayLai){
-            QuanLy ql = new QuanLy();
+            GUIQuanLy ql = new GUIQuanLy();
             ql.setVisible(true);
             this.dispose();
         }
     }//GEN-LAST:event_btnQuayLaiActionPerformed
+    
+    private void btnThemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnThemActionPerformed
+        // TODO add your handling code here:
+        if(evt.getSource() == btnThem){
+            if(ConfirmAdd.main(null)){
+                String fields = getFields();
+                if(control.add(fields)){
+                    dtm.addRow(fields.split("\t"));
+                }
+            }
+        }
+    }//GEN-LAST:event_btnThemActionPerformed
+
+    private void btnSuaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSuaActionPerformed
+        // TODO add your handling code here:
+        if(evt.getSource() == btnSua){
+            if(ConfirmEdit.main(null)){
+                int selected = tbPhong.getSelectedRow(); 
+                String key = (String)dtm.getValueAt(selected, 0);
+                String fields = getFields();
+                if(control.edit(fields,key)){
+                    tbPhong.getSelectionModel().removeSelectionInterval(selected,0);
+                    dtm.removeRow(selected);
+                    dtm.insertRow(selected, fields.split("\t"));
+                }
+            }
+        }
+    }//GEN-LAST:event_btnSuaActionPerformed
+
+    private void btnXoaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnXoaActionPerformed
+        // TODO add your handling code here:
+        if(evt.getSource() == btnXoa){
+            if(ConfirmDelete.main(null)){
+                int selected = tbPhong.getSelectedRow(); 
+                String key = (String)dtm.getValueAt(selected, 0);
+                if(control.delete(key)){
+                    tbPhong.getSelectionModel().removeSelectionInterval(selected,0);
+                    dtm.removeRow(selected);
+                }
+            }
+        }
+    }//GEN-LAST:event_btnXoaActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        if(evt.getSource() == jButton1){
+            JFileChooser chooser = new JFileChooser();
+            FileNameExtensionFilter filter = new FileNameExtensionFilter("Excel Workbook", "xls");
+            chooser.setFileFilter(filter);
+            int returnVal = chooser.showOpenDialog(this);
+            
+            File file;
+            if(returnVal == JFileChooser.APPROVE_OPTION) {
+                file = chooser.getSelectedFile();
+                file = file.getAbsoluteFile();
+                Vector<String> rows = control.addFile(file.getPath());
+                
+                for(String s : rows){
+                    dtm.addRow(s.split("\t"));
+                }
+            }
+        }
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -434,25 +531,22 @@ public class Phong extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Phong.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(GUIPhong.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Phong.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(GUIPhong.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Phong.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(GUIPhong.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Phong.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(GUIPhong.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                Phong phong = null;
-                try {
-                    phong = new Phong();
-                } catch (SQLException ex) {
-                    Logger.getLogger(Phong.class.getName()).log(Level.SEVERE, null, ex);
-                }
+                GUIPhong phong = null;
+                phong = new GUIPhong();
                 phong.setSize(1024, 768);
                 //phong.setResizable(false);
                 phong.setLocationRelativeTo(null);
@@ -468,6 +562,7 @@ public class Phong extends javax.swing.JFrame {
     private javax.swing.JButton btnThem;
     private javax.swing.JButton btnTimKiem;
     private javax.swing.JButton btnXoa;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

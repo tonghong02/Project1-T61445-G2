@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package khachsan.view;
+package project1.nhom2.de14.view;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -81,7 +81,7 @@ public class Login extends javax.swing.JFrame {
         jLabel4.setText("Mật khẩu : ");
 
         btnDangNhap.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
-        btnDangNhap.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/login.png"))); // NOI18N
+        btnDangNhap.setIcon(new javax.swing.ImageIcon(getClass().getResource("/project1/nhom2/de14/images/login.png"))); // NOI18N
         btnDangNhap.setText("Đăng nhập ");
         btnDangNhap.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(153, 153, 153), null));
         btnDangNhap.addActionListener(new java.awt.event.ActionListener() {
@@ -89,8 +89,6 @@ public class Login extends javax.swing.JFrame {
                 btnDangNhapActionPerformed(evt);
             }
         });
-
-        pfMatKhau.setText("jPasswordField1");
 
         buttonGroup1.add(rdQuanLy);
         rdQuanLy.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
@@ -106,7 +104,7 @@ public class Login extends javax.swing.JFrame {
         rdNhanVien.setText("Nhân viên");
 
         btnThoat.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
-        btnThoat.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/log_out.png"))); // NOI18N
+        btnThoat.setIcon(new javax.swing.ImageIcon(getClass().getResource("/project1/nhom2/de14/images/log_out.png"))); // NOI18N
         btnThoat.setText("Thoát");
         btnThoat.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(153, 153, 153), null));
         btnThoat.addActionListener(new java.awt.event.ActionListener() {
@@ -181,7 +179,7 @@ public class Login extends javax.swing.JFrame {
         jPanel2Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {btnDangNhap, btnThoat});
 
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/DangNhap.png"))); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/project1/nhom2/de14/images/DangNhap.png"))); // NOI18N
         jLabel3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -210,7 +208,7 @@ public class Login extends javax.swing.JFrame {
                 .addComponent(jLabel1)
                 .addGap(18, 18, 18)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(57, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();

@@ -295,7 +295,7 @@
                                   <Font name="Dialog" size="14" style="0"/>
                                 </Property>
                                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                                  <Image iconType="3" name="/images/backk.png"/>
+                                  <Image iconType="3" name="/project1/nhom2/de14/images/backk.png"/>
                                 </Property>
                                 <Property name="text" type="java.lang.String" value="Quay l&#x1ea1;i"/>
                               </Properties>
@@ -309,7 +309,7 @@
                                   <Font name="Dialog" size="14" style="0"/>
                                 </Property>
                                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                                  <Image iconType="3" name="/images/print.png"/>
+                                  <Image iconType="3" name="/project1/nhom2/de14/images/print.png"/>
                                 </Property>
                                 <Property name="text" type="java.lang.String" value="In bi&#x1ec3;u m&#x1eab;u"/>
                               </Properties>
@@ -536,7 +536,7 @@
                                   <Font name="Dialog" size="14" style="0"/>
                                 </Property>
                                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                                  <Image iconType="3" name="/images/backk.png"/>
+                                  <Image iconType="3" name="/project1/nhom2/de14/images/backk.png"/>
                                 </Property>
                                 <Property name="text" type="java.lang.String" value="Quay l&#x1ea1;i"/>
                               </Properties>
@@ -550,7 +550,7 @@
                                   <Font name="Dialog" size="14" style="0"/>
                                 </Property>
                                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                                  <Image iconType="3" name="/images/print.png"/>
+                                  <Image iconType="3" name="/project1/nhom2/de14/images/print.png"/>
                                 </Property>
                                 <Property name="text" type="java.lang.String" value="In bi&#x1ec3;u m&#x1eab;u"/>
                               </Properties>
@@ -778,7 +778,7 @@
                                   <Font name="Dialog" size="14" style="0"/>
                                 </Property>
                                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                                  <Image iconType="3" name="/images/backk.png"/>
+                                  <Image iconType="3" name="/project1/nhom2/de14/images/backk.png"/>
                                 </Property>
                                 <Property name="text" type="java.lang.String" value="Quay l&#x1ea1;i"/>
                               </Properties>
@@ -792,7 +792,7 @@
                                   <Font name="Dialog" size="14" style="0"/>
                                 </Property>
                                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                                  <Image iconType="3" name="/images/print.png"/>
+                                  <Image iconType="3" name="/project1/nhom2/de14/images/print.png"/>
                                 </Property>
                                 <Property name="text" type="java.lang.String" value="In bi&#x1ec3;u m&#x1eab;u "/>
                               </Properties>
@@ -1013,7 +1013,7 @@
                                   <Font name="Dialog" size="14" style="0"/>
                                 </Property>
                                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                                  <Image iconType="3" name="/images/backk.png"/>
+                                  <Image iconType="3" name="/project1/nhom2/de14/images/backk.png"/>
                                 </Property>
                                 <Property name="text" type="java.lang.String" value="Quay l&#x1ea1;i"/>
                               </Properties>
@@ -1027,7 +1027,7 @@
                                   <Font name="Dialog" size="14" style="0"/>
                                 </Property>
                                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                                  <Image iconType="3" name="/images/print.png"/>
+                                  <Image iconType="3" name="/project1/nhom2/de14/images/print.png"/>
                                 </Property>
                                 <Property name="text" type="java.lang.String" value="In bi&#x1ec3;u m&#x1eab;u "/>
                               </Properties>
@@ -1189,7 +1189,7 @@
                                   <Font name="Dialog" size="14" style="0"/>
                                 </Property>
                                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                                  <Image iconType="3" name="/images/backk.png"/>
+                                  <Image iconType="3" name="/project1/nhom2/de14/images/backk.png"/>
                                 </Property>
                                 <Property name="text" type="java.lang.String" value="Quay l&#x1ea1;i"/>
                               </Properties>
@@ -1203,7 +1203,7 @@
                                   <Font name="Dialog" size="14" style="0"/>
                                 </Property>
                                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                                  <Image iconType="3" name="/images/print.png"/>
+                                  <Image iconType="3" name="/project1/nhom2/de14/images/print.png"/>
                                 </Property>
                                 <Property name="text" type="java.lang.String" value="In bi&#x1ec3;u m&#x1eab;u"/>
                               </Properties>

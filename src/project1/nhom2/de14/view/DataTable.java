@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package khachsan.view;
+package project1.nhom2.de14.view;
 
 import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
@@ -13,7 +13,6 @@ import java.util.Vector;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.table.DefaultTableModel;
-import static khachsan.view.DBConnnection.con;
 
 /**
  *

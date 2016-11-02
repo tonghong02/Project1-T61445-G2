@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package khachsan.view;
+package project1.nhom2.de14.view;
 
 /**
  *
@@ -180,7 +180,7 @@ public class DoiTaiKhoann extends javax.swing.JFrame {
     private void btnQuayLaiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnQuayLaiActionPerformed
         // TODO add your handling code here:
         if(evt.getSource() == btnQuayLai){
-            QuanLyTaiKhoan qltk = new QuanLyTaiKhoan();
+            GUIQuanLyTaiKhoan qltk = new GUIQuanLyTaiKhoan();
             qltk.setVisible(true);
             this.dispose();
         }

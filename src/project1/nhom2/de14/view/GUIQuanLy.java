@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package khachsan.view;
+package project1.nhom2.de14.view;
 
 import java.sql.SQLException;
 import java.util.logging.Level;
@@ -14,12 +14,12 @@ import javax.swing.JFrame;
  *
  * @author dell
  */
-public class QuanLy extends javax.swing.JFrame {
+public class GUIQuanLy extends javax.swing.JFrame {
 
     /**
      * Creates new form QuanLy
      */
-    public QuanLy() {
+    public GUIQuanLy() {
         initComponents();
     }
 
@@ -62,7 +62,7 @@ public class QuanLy extends javax.swing.JFrame {
         );
 
         btnHoaDon.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        btnHoaDon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/hoadon.png"))); // NOI18N
+        btnHoaDon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/project1/nhom2/de14/images/hoadon.png"))); // NOI18N
         btnHoaDon.setText("Hóa đơn");
         btnHoaDon.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         btnHoaDon.addActionListener(new java.awt.event.ActionListener() {
@@ -72,7 +72,7 @@ public class QuanLy extends javax.swing.JFrame {
         });
 
         btnDatPhong.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        btnDatPhong.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/datphong.png"))); // NOI18N
+        btnDatPhong.setIcon(new javax.swing.ImageIcon(getClass().getResource("/project1/nhom2/de14/images/datphong.png"))); // NOI18N
         btnDatPhong.setText("Đặt phòng");
         btnDatPhong.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         btnDatPhong.addActionListener(new java.awt.event.ActionListener() {
@@ -82,7 +82,7 @@ public class QuanLy extends javax.swing.JFrame {
         });
 
         btnPhong.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        btnPhong.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/phong.png"))); // NOI18N
+        btnPhong.setIcon(new javax.swing.ImageIcon(getClass().getResource("/project1/nhom2/de14/images/phong.png"))); // NOI18N
         btnPhong.setText("Phòng");
         btnPhong.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         btnPhong.addActionListener(new java.awt.event.ActionListener() {
@@ -92,7 +92,7 @@ public class QuanLy extends javax.swing.JFrame {
         });
 
         btnDichVu.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        btnDichVu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/dichvu.png"))); // NOI18N
+        btnDichVu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/project1/nhom2/de14/images/dichvu.png"))); // NOI18N
         btnDichVu.setText("Dịch vụ");
         btnDichVu.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         btnDichVu.addActionListener(new java.awt.event.ActionListener() {
@@ -102,7 +102,7 @@ public class QuanLy extends javax.swing.JFrame {
         });
 
         btnNhanVien.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        btnNhanVien.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/nahnvien.png"))); // NOI18N
+        btnNhanVien.setIcon(new javax.swing.ImageIcon(getClass().getResource("/project1/nhom2/de14/images/nahnvien.png"))); // NOI18N
         btnNhanVien.setText("Nhân viên");
         btnNhanVien.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         btnNhanVien.addActionListener(new java.awt.event.ActionListener() {
@@ -112,7 +112,7 @@ public class QuanLy extends javax.swing.JFrame {
         });
 
         btnKhachHang.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        btnKhachHang.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/khachhang.png"))); // NOI18N
+        btnKhachHang.setIcon(new javax.swing.ImageIcon(getClass().getResource("/project1/nhom2/de14/images/khachhang.png"))); // NOI18N
         btnKhachHang.setText("Khách hàng");
         btnKhachHang.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         btnKhachHang.addActionListener(new java.awt.event.ActionListener() {
@@ -121,7 +121,7 @@ public class QuanLy extends javax.swing.JFrame {
             }
         });
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/khachsan.png"))); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/project1/nhom2/de14/images/khachsan.jpg"))); // NOI18N
         jLabel3.setText("jLabel3");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -134,16 +134,15 @@ public class QuanLy extends javax.swing.JFrame {
                     .addComponent(btnKhachHang)
                     .addComponent(btnDichVu, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(jPanel1Layout.createSequentialGroup()
-                            .addGap(66, 66, 66)
-                            .addComponent(btnDatPhong))
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(btnNhanVien)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(122, 122, 122)
-                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(66, 66, 66)
+                        .addComponent(btnDatPhong))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnNhanVien))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(82, 82, 82)
+                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(498, 498, 498)
@@ -175,14 +174,14 @@ public class QuanLy extends javax.swing.JFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(btnHoaDon, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(btnDichVu, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                        .addGap(0, 149, Short.MAX_VALUE)))
                 .addContainerGap())
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(28, 28, 28)
                 .addComponent(btnDatPhong)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 77, Short.MAX_VALUE)
+                .addGap(37, 37, 37)
                 .addComponent(jLabel3)
-                .addGap(70, 70, 70)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(btnNhanVien)
                 .addGap(67, 67, 67))
         );
@@ -190,7 +189,7 @@ public class QuanLy extends javax.swing.JFrame {
         jPanel1Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {btnDatPhong, btnDichVu, btnHoaDon, btnKhachHang, btnNhanVien, btnPhong});
 
         btnQuayLai.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        btnQuayLai.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/back.png"))); // NOI18N
+        btnQuayLai.setIcon(new javax.swing.ImageIcon(getClass().getResource("/project1/nhom2/de14/images/backk.png"))); // NOI18N
         btnQuayLai.setText("Quay lại");
         btnQuayLai.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -243,14 +242,9 @@ public class QuanLy extends javax.swing.JFrame {
     private void btnPhongActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPhongActionPerformed
         // TODO add your handling code here:
         if(evt.getSource() == btnPhong){
-            Phong p;
-            try {
-                p = new Phong();
-                p.setVisible(true);
-            } catch (SQLException ex) {
-                Logger.getLogger(QuanLy.class.getName()).log(Level.SEVERE, null, ex);
-            }
-            
+            GUIPhong p;
+            p = new GUIPhong();
+            p.setVisible(true);
             this.dispose();
         }
     }//GEN-LAST:event_btnPhongActionPerformed
@@ -258,8 +252,8 @@ public class QuanLy extends javax.swing.JFrame {
     private void btnNhanVienActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNhanVienActionPerformed
         // TODO add your handling code here:
         if(evt.getSource() == btnNhanVien){
-            NhanVien nv;
-            nv = new NhanVien();
+            GUINhanVien nv;
+            nv = new GUINhanVien();
             nv.setVisible(true);
             
             this.dispose();
@@ -269,7 +263,7 @@ public class QuanLy extends javax.swing.JFrame {
     private void btnDichVuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDichVuActionPerformed
         // TODO add your handling code here:
         if(evt.getSource() == btnDichVu){
-            DichVu dv = new DichVu();
+            GUIDichVu dv = new GUIDichVu();
            
             dv.setVisible(true);
             
@@ -280,7 +274,7 @@ public class QuanLy extends javax.swing.JFrame {
     private void btnKhachHangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKhachHangActionPerformed
         // TODO add your handling code here:
         if(evt.getSource() == btnKhachHang){
-            KhachHang kh = new KhachHang();
+            GUIKhachHang kh = new GUIKhachHang();
             kh.setVisible(true);
             this.dispose();
         }
@@ -289,7 +283,7 @@ public class QuanLy extends javax.swing.JFrame {
     private void btnDatPhongActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDatPhongActionPerformed
         // TODO add your handling code here:
         if(evt.getSource() == btnDatPhong){
-            DatPhong dp = new DatPhong();
+            GUIDatPhong dp = new GUIDatPhong();
             dp.setVisible(true);
             this.dispose();
         }
@@ -298,7 +292,7 @@ public class QuanLy extends javax.swing.JFrame {
     private void btnHoaDonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHoaDonActionPerformed
         // TODO add your handling code here:
         if(evt.getSource() == btnHoaDon){
-            QLHoaDon hd = new QLHoaDon();
+            GUIQLHoaDon hd = new GUIQLHoaDon();
             hd.setVisible(true);
             this.dispose();
         }
@@ -330,20 +324,21 @@ public class QuanLy extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(QuanLy.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(GUIQuanLy.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(QuanLy.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(GUIQuanLy.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(QuanLy.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(GUIQuanLy.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(QuanLy.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(GUIQuanLy.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                QuanLy quanLy = new QuanLy();
+                GUIQuanLy quanLy = new GUIQuanLy();
                 quanLy.setSize(1024, 768);
                 quanLy.setResizable(false);
                 quanLy.setLocationRelativeTo(null);
