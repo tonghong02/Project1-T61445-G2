@@ -34,7 +34,7 @@ public class GUIPhong extends javax.swing.JFrame {
         String[] colName = {"Mã phòng", "Loại phòng", "Mức giá", "Trạng thái"};
         dtm = new DefaultTableModel(control.getTableData(), colName);
         this.tbPhong.setModel(dtm);
-        
+       
         tbPhong.getSelectionModel().addListSelectionListener(new ListSelectionListener(){
         @Override
         public void valueChanged(ListSelectionEvent event) {
@@ -120,6 +120,11 @@ public class GUIPhong extends javax.swing.JFrame {
 
         btnTimKiem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/project1/nhom2/de14/images/search.png"))); // NOI18N
         btnTimKiem.setText("Tìm kiếm");
+        btnTimKiem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnTimKiemActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
         jPanel8.setLayout(jPanel8Layout);
@@ -513,6 +518,10 @@ public class GUIPhong extends javax.swing.JFrame {
             }
         }
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void btnTimKiemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTimKiemActionPerformed
+        
+    }//GEN-LAST:event_btnTimKiemActionPerformed
 
     /**
      * @param args the command line arguments

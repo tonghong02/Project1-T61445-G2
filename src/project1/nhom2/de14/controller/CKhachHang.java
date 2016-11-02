@@ -108,13 +108,14 @@ public class CKhachHang {
 
 	public Object[][] getTableData() {
 		if (DS == null) {
-			return new Object[0][4];
+			return new Object[0][7];
 		}
-		Object[][] data = new Object[DS.size()][4];
+		Object[][] data = new Object[DS.size()][7];
 
 		int i = 0;
 		for (KhachHang p : DS) {
 			data[i] = p.getValues();
+                        System.out.println(data[i][6]);
 			i++;
 		}
 

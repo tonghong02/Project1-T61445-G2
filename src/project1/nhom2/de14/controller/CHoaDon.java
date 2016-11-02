@@ -27,7 +27,7 @@ public class CHoaDon {
 		
 		String[] key = null;
 
-		Vector<String> vec = conn.select("nhanvien", key);
+		Vector<String> vec = conn.select("hoadon", key);
 		for(String s : vec){
 			DS.add(new HoaDon(s));
 		}
@@ -56,7 +56,7 @@ public class CHoaDon {
 	}
 	
 	public boolean delete(String key){
-		if(!conn.delete("hoadon", "MaDP", key))
+		if(!conn.delete("hoadon", "MaHD", key))
 			return false;
 		
 		int pos = searchIndex(key);
@@ -71,8 +71,8 @@ public class CHoaDon {
 		values[0] = "MaHD=" + "'" + values[0] + "'";
 		values[1] = "MaDatPhong=" + "'" + values[1] + "'";
 		values[2] = "TGThanhToan=" +"STR_TO_DATE(" + "'"+ values[2]+"',"+"'%d-%m-%Y')";
-		values[4] = "TienPhong=" + values[4];
-		values[5] = "TienDichVu=" + values[5];
+		values[3] = "TienPhong=" + values[3];
+		values[4] = "TienDichVu=" + values[4];
 		
 		String pkey = "MaHD=" + "'" + key + "'";
 		if (!conn.update("hoadon", values, pkey)) {

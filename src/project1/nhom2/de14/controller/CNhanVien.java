@@ -58,7 +58,7 @@ public class CNhanVien {
 	}
 	
 	public boolean delete(String key){
-		if(!conn.delete("nhanvien", "MaKH", key))
+		if(!conn.delete("nhanvien", "MaNV", key))
 			return false;
 		
 		int pos = searchIndex(key);
@@ -76,10 +76,10 @@ public class CNhanVien {
 		values[3] = "GioiTinh=" + "'" + values[3] + "'";
 		values[4] = "SoCMND=" + "'" + values[4] + "'";
 		values[5] = "DiaChi=" + "'" + values[5] + "'";
-		values[6] = "QuocTich" + "'" + values[6] + "'";
+		values[6] = "ChucVu = " + "'" + values[6] + "'";
 		values[7] = "SDT=" + "'" + values[7] + "'";
 		
-		String pkey = "MaKH=" + "'" + key + "'";
+		String pkey = "MaNV=" + "'" + key + "'";
 		if (!conn.update("nhanvien", values, pkey)) {
 			return false;
 		}

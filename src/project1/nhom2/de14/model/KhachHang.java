@@ -20,6 +20,7 @@ public class KhachHang {
 
     public KhachHang(String record){
         String [] values = new String[7];
+        System.out.println(record);
         values = record.split("\t",7);
         maKH = values[0];
         tenKH = values[1];

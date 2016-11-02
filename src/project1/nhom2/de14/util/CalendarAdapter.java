@@ -41,7 +41,7 @@ public class CalendarAdapter {
 		int date = Integer.parseInt(spl[0]), month = Integer.parseInt(spl[1]), year = Integer.parseInt(spl[2]);
 		
 		@SuppressWarnings("deprecation")
-		Date d = new Date(year-1900,month-1,date);
+		Date d = new Date(year-1900,month,date);
 		return d;
 	}
         

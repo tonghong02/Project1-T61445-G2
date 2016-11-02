@@ -5,7 +5,15 @@
  */
 package project1.nhom2.de14.view;
 
+import java.io.File;
+import java.util.Vector;
+import javax.swing.JFileChooser;
 import javax.swing.JFrame;
+import javax.swing.event.ListSelectionEvent;
+import javax.swing.event.ListSelectionListener;
+import javax.swing.filechooser.FileNameExtensionFilter;
+import javax.swing.table.DefaultTableModel;
+import project1.nhom2.de14.controller.CHoaDon;
 
 /**
  *
@@ -13,11 +21,56 @@ import javax.swing.JFrame;
  */
 public class GUIQLHoaDon extends javax.swing.JFrame {
 
-    /**
-     * Creates new form HoaDon
-     */
+   CHoaDon control;
+   DefaultTableModel dtm;
+    
     public GUIQLHoaDon() {
         initComponents();
+        control = new CHoaDon("root", "tonghong96");
+        String[] colName = {"Mã hóa đơn", "Mã đặt phòng", "TG Thanh toán", "Tiền phòng", "Tiền dịch vụ"};
+        dtm = new DefaultTableModel(control.getTableData(), colName);
+        this.tbHoaDon.setModel(dtm);
+        
+        tbHoaDon.getSelectionModel().addListSelectionListener(new ListSelectionListener() {
+            @Override
+            public void valueChanged(ListSelectionEvent e) {
+                int selected = tbHoaDon.getSelectedRow();
+                if(selected < 0){
+                    tfMaHoaDon.setText("");
+                    tfMaDatPhong.setText("");
+                    tfThoiGianThanhToan.setText("");
+                    tfTienPhong.setText("");
+                    tfTienDichVu.setText("");
+                    return ;
+                }
+                
+                tfMaHoaDon.setText((String) dtm.getValueAt(selected, 0));
+                tfMaDatPhong.setText((String) dtm.getValueAt(selected, 1));
+                tfThoiGianThanhToan.setText((String) dtm.getValueAt(selected, 2));
+                tfTienPhong.setText((String) dtm.getValueAt(selected, 3));
+                tfTienDichVu.setText((String) dtm.getValueAt(selected, 4));
+
+
+            }
+        });
+        
+        
+    }
+    
+    private String getFields(){
+        String fields = new String();
+        
+        fields += this.tfMaHoaDon.getText();
+        fields += "\t";
+        fields += this.tfMaDatPhong.getText();
+        fields += "\t";
+        fields += this.tfThoiGianThanhToan.getText();
+        fields += "\t";
+        fields += this.tfTienPhong.getText();
+        fields += "\t";
+        fields += this.tfTienDichVu.getText();
+        
+        return fields;
     }
 
     /**
@@ -38,23 +91,24 @@ public class GUIQLHoaDon extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
-        jTextField5 = new javax.swing.JTextField();
-        jTextField6 = new javax.swing.JTextField();
+        tfMaHoaDon = new javax.swing.JTextField();
+        tfMaDatPhong = new javax.swing.JTextField();
+        tfThoiGianThanhToan = new javax.swing.JTextField();
+        tfTienDichVu = new javax.swing.JTextField();
+        tfTienPhong = new javax.swing.JTextField();
         jPanel5 = new javax.swing.JPanel();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        btnThem = new javax.swing.JButton();
+        btnSua = new javax.swing.JButton();
+        btnXoa = new javax.swing.JButton();
+        btnThemTuFile = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
-        jTextField7 = new javax.swing.JTextField();
+        tfTongTien = new javax.swing.JTextField();
         jPanel4 = new javax.swing.JPanel();
         jTextField1 = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         jPanel6 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        tbHoaDon = new javax.swing.JTable();
         btnQuayLai = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -81,20 +135,43 @@ public class GUIQLHoaDon extends javax.swing.JFrame {
         jLabel6.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         jLabel6.setText("Tiền phòng :");
 
-        jButton2.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/project1/nhom2/de14/images/add (1).png"))); // NOI18N
-        jButton2.setText("Thêm");
-        jPanel5.add(jButton2);
+        btnThem.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        btnThem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/project1/nhom2/de14/images/add (1).png"))); // NOI18N
+        btnThem.setText("Thêm");
+        btnThem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnThemActionPerformed(evt);
+            }
+        });
+        jPanel5.add(btnThem);
 
-        jButton3.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/project1/nhom2/de14/images/edit.png"))); // NOI18N
-        jButton3.setText("Sửa");
-        jPanel5.add(jButton3);
+        btnSua.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        btnSua.setIcon(new javax.swing.ImageIcon(getClass().getResource("/project1/nhom2/de14/images/edit.png"))); // NOI18N
+        btnSua.setText("Sửa");
+        btnSua.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSuaActionPerformed(evt);
+            }
+        });
+        jPanel5.add(btnSua);
 
-        jButton4.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
-        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/project1/nhom2/de14/images/garbage.png"))); // NOI18N
-        jButton4.setText("Xóa");
-        jPanel5.add(jButton4);
+        btnXoa.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        btnXoa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/project1/nhom2/de14/images/garbage.png"))); // NOI18N
+        btnXoa.setText("Xóa");
+        btnXoa.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnXoaActionPerformed(evt);
+            }
+        });
+        jPanel5.add(btnXoa);
+
+        btnThemTuFile.setText("Thêm từ file");
+        btnThemTuFile.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnThemTuFileActionPerformed(evt);
+            }
+        });
+        jPanel5.add(btnThemTuFile);
 
         jLabel7.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         jLabel7.setText("Tổng tiền : ");
@@ -111,9 +188,9 @@ public class GUIQLHoaDon extends javax.swing.JFrame {
                     .addComponent(jLabel5))
                 .addGap(29, 29, 29)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(tfMaHoaDon, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tfMaDatPhong, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tfThoiGianThanhToan, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(65, 65, 65)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel4)
@@ -121,9 +198,9 @@ public class GUIQLHoaDon extends javax.swing.JFrame {
                     .addComponent(jLabel7))
                 .addGap(2, 2, 2)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(tfTongTien, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tfTienPhong, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tfTienDichVu, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
@@ -133,35 +210,35 @@ public class GUIQLHoaDon extends javax.swing.JFrame {
 
         jPanel3Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jLabel2, jLabel3, jLabel4, jLabel5, jLabel6});
 
-        jPanel3Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jTextField2, jTextField3, jTextField4, jTextField5, jTextField6, jTextField7});
+        jPanel3Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {tfMaDatPhong, tfMaHoaDon, tfThoiGianThanhToan, tfTienDichVu, tfTienPhong, tfTongTien});
 
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGap(39, 39, 39)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tfMaHoaDon, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2)
                     .addComponent(jLabel6)
-                    .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(tfTienPhong, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGap(25, 25, 25)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(tfMaDatPhong, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel3)))
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGap(18, 18, 18)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel4)
-                            .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(tfTienDichVu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel5)
                     .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(tfThoiGianThanhToan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jLabel7)
-                        .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(tfTongTien, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 24, Short.MAX_VALUE)
                 .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(28, 28, 28))
@@ -169,7 +246,7 @@ public class GUIQLHoaDon extends javax.swing.JFrame {
 
         jPanel3Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jLabel2, jLabel3, jLabel4, jLabel5, jLabel6});
 
-        jPanel3Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jTextField2, jTextField3, jTextField4, jTextField5, jTextField6, jTextField7});
+        jPanel3Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {tfMaDatPhong, tfMaHoaDon, tfThoiGianThanhToan, tfTienDichVu, tfTienPhong, tfTongTien});
 
         jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Tìm  kiếm thông tin", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Dialog", 0, 14))); // NOI18N
 
@@ -201,7 +278,7 @@ public class GUIQLHoaDon extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tbHoaDon.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null},
                 {null, null, null, null, null, null},
@@ -214,7 +291,7 @@ public class GUIQLHoaDon extends javax.swing.JFrame {
                 "MaHoaDon", "MaDatPhong", "ThoiGianThanhToan", "TienPhong", "TienDichVu", "TongTien"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(tbHoaDon);
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
@@ -296,6 +373,65 @@ public class GUIQLHoaDon extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btnQuayLaiActionPerformed
 
+    private void btnThemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnThemActionPerformed
+        if(evt.getSource() == btnThem){
+            if(ConfirmAdd.main(null)){
+                String fields = getFields();
+                if(control.add(fields)){
+                    dtm.addRow(fields.split("\t"));
+                }
+            }
+        }
+    }//GEN-LAST:event_btnThemActionPerformed
+
+    private void btnSuaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSuaActionPerformed
+        if(evt.getSource() == btnSua){
+            if(ConfirmEdit.main(null)){
+                int selected = tbHoaDon.getSelectedRow(); 
+                String key = (String)dtm.getValueAt(selected, 0);
+                String fields = getFields();
+                if(control.edit(fields,key)){
+                    tbHoaDon.getSelectionModel().removeSelectionInterval(selected,0);
+                    dtm.removeRow(selected);
+                    dtm.insertRow(selected, fields.split("\t"));
+                }
+            }
+        }
+    }//GEN-LAST:event_btnSuaActionPerformed
+
+    private void btnXoaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnXoaActionPerformed
+        if(evt.getSource() == btnXoa){
+            if(ConfirmDelete.main(null)){
+                int selected = tbHoaDon.getSelectedRow(); 
+                String key = (String)dtm.getValueAt(selected, 0);
+                if(control.delete(key)){
+                    tbHoaDon.getSelectionModel().removeSelectionInterval(selected,0);
+                    dtm.removeRow(selected);
+                }
+            }
+        }
+    }//GEN-LAST:event_btnXoaActionPerformed
+
+    private void btnThemTuFileActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnThemTuFileActionPerformed
+        if(evt.getSource() == btnThemTuFile){
+            JFileChooser chooser = new JFileChooser();
+            FileNameExtensionFilter filter = new FileNameExtensionFilter("Excel Workbook", "xls");
+            chooser.setFileFilter(filter);
+            int returnVal = chooser.showOpenDialog(this);
+            
+            File file;
+            if(returnVal == JFileChooser.APPROVE_OPTION) {
+                file = chooser.getSelectedFile();
+                file = file.getAbsoluteFile();
+                Vector<String> rows = control.addFile(file.getPath());
+                
+                for(String s : rows){
+                    dtm.addRow(s.split("\t"));
+                }
+            }
+        }
+    }//GEN-LAST:event_btnThemTuFileActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -341,10 +477,11 @@ public class GUIQLHoaDon extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnQuayLai;
+    private javax.swing.JButton btnSua;
+    private javax.swing.JButton btnThem;
+    private javax.swing.JButton btnThemTuFile;
+    private javax.swing.JButton btnXoa;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -359,13 +496,13 @@ public class GUIQLHoaDon extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
     private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
+    private javax.swing.JTable tbHoaDon;
+    private javax.swing.JTextField tfMaDatPhong;
+    private javax.swing.JTextField tfMaHoaDon;
+    private javax.swing.JTextField tfThoiGianThanhToan;
+    private javax.swing.JTextField tfTienDichVu;
+    private javax.swing.JTextField tfTienPhong;
+    private javax.swing.JTextField tfTongTien;
     // End of variables declaration//GEN-END:variables
 }

@@ -119,9 +119,9 @@
                           </Group>
                           <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jTextField2" linkSize="3" alignment="0" min="-2" pref="147" max="-2" attributes="0"/>
-                              <Component id="jTextField3" linkSize="3" alignment="0" min="-2" pref="125" max="-2" attributes="0"/>
-                              <Component id="jTextField4" linkSize="3" alignment="0" min="-2" pref="125" max="-2" attributes="0"/>
+                              <Component id="tfMaHoaDon" linkSize="3" alignment="0" min="-2" pref="147" max="-2" attributes="0"/>
+                              <Component id="tfMaDatPhong" linkSize="3" alignment="0" min="-2" pref="125" max="-2" attributes="0"/>
+                              <Component id="tfThoiGianThanhToan" linkSize="3" alignment="0" min="-2" pref="125" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="65" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
@@ -131,9 +131,9 @@
                           </Group>
                           <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jTextField7" linkSize="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jTextField6" linkSize="3" min="-2" pref="125" max="-2" attributes="0"/>
-                              <Component id="jTextField5" linkSize="3" min="-2" pref="125" max="-2" attributes="0"/>
+                              <Component id="tfTongTien" linkSize="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="tfTienPhong" linkSize="3" min="-2" pref="125" max="-2" attributes="0"/>
+                              <Component id="tfTienDichVu" linkSize="3" min="-2" pref="125" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="32767" attributes="0"/>
                       </Group>
@@ -149,16 +149,16 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jTextField2" linkSize="4" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
+                              <Component id="tfMaHoaDon" linkSize="4" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
                               <Component id="jLabel2" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jLabel6" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jTextField6" linkSize="4" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="tfTienPhong" linkSize="4" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" attributes="0">
                                   <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="jTextField3" linkSize="4" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="tfMaDatPhong" linkSize="4" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="jLabel3" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
@@ -166,7 +166,7 @@
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jLabel4" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jTextField5" linkSize="4" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="tfTienDichVu" linkSize="4" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
@@ -174,9 +174,9 @@
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="jLabel5" linkSize="2" min="-2" max="-2" attributes="0"/>
                               <Group type="103" alignment="0" groupAlignment="3" attributes="0">
-                                  <Component id="jTextField4" linkSize="4" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="tfThoiGianThanhToan" linkSize="4" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jTextField7" linkSize="4" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="tfTongTien" linkSize="4" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace pref="24" max="32767" attributes="0"/>
@@ -227,21 +227,21 @@
                     <Property name="text" type="java.lang.String" value="Ti&#x1ec1;n ph&#xf2;ng :"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField2">
+                <Component class="javax.swing.JTextField" name="tfMaHoaDon">
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField3">
+                <Component class="javax.swing.JTextField" name="tfMaDatPhong">
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField4">
+                <Component class="javax.swing.JTextField" name="tfThoiGianThanhToan">
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField5">
+                <Component class="javax.swing.JTextField" name="tfTienDichVu">
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField6">
+                <Component class="javax.swing.JTextField" name="tfTienPhong">
                 </Component>
                 <Container class="javax.swing.JPanel" name="jPanel5">
 
                   <Layout class="org.netbeans.modules.form.compat2.layouts.DesignFlowLayout"/>
                   <SubComponents>
-                    <Component class="javax.swing.JButton" name="jButton2">
+                    <Component class="javax.swing.JButton" name="btnThem">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Dialog" size="14" style="0"/>
@@ -251,8 +251,11 @@
                         </Property>
                         <Property name="text" type="java.lang.String" value="Th&#xea;m"/>
                       </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnThemActionPerformed"/>
+                      </Events>
                     </Component>
-                    <Component class="javax.swing.JButton" name="jButton3">
+                    <Component class="javax.swing.JButton" name="btnSua">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Dialog" size="14" style="0"/>
@@ -262,8 +265,11 @@
                         </Property>
                         <Property name="text" type="java.lang.String" value="S&#x1eed;a"/>
                       </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSuaActionPerformed"/>
+                      </Events>
                     </Component>
-                    <Component class="javax.swing.JButton" name="jButton4">
+                    <Component class="javax.swing.JButton" name="btnXoa">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Dialog" size="14" style="0"/>
@@ -273,6 +279,17 @@
                         </Property>
                         <Property name="text" type="java.lang.String" value="X&#xf3;a"/>
                       </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnXoaActionPerformed"/>
+                      </Events>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="btnThemTuFile">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Th&#xea;m t&#x1eeb; file"/>
+                      </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnThemTuFileActionPerformed"/>
+                      </Events>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -284,7 +301,7 @@
                     <Property name="text" type="java.lang.String" value="T&#x1ed5;ng ti&#x1ec1;n : "/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField7">
+                <Component class="javax.swing.JTextField" name="tfTongTien">
                 </Component>
               </SubComponents>
             </Container>
@@ -364,7 +381,7 @@
 
                   <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
                   <SubComponents>
-                    <Component class="javax.swing.JTable" name="jTable1">
+                    <Component class="javax.swing.JTable" name="tbHoaDon">
                       <Properties>
                         <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
                           <Table columnCount="6" rowCount="6">

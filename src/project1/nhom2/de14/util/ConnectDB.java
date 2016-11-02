@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package project1.nhom2.de14.util;
 
 import java.sql.Connection;
@@ -77,7 +72,7 @@ public class ConnectDB {
 					while (rs.next()) {
 
 						vector.add(rs.getString(1) + "\t" + rs.getString(2) + "\t" + rs.getString(3) + "\t" + rs.getString(4) + "\t"
-								+ rs.getString(4) + "\t" + rs.getString(5) + "\t" + rs.getString(6) + "\t" + rs.getString(7));
+							  + rs.getString(5) + "\t" + rs.getString(6) + "\t" + rs.getString(7));
 					}
 				case "hoadon":
 					while (rs.next()) {
@@ -128,24 +123,34 @@ public class ConnectDB {
 
 			String sqlcommand = "insert into " + table;
 			PreparedStatement pst = null;
+			System.out.println(sqlcommand);
 
 			if (table.equals("phong")) {
 				sqlcommand = sqlcommand + " values(" + "'" + values[0] + "','" + values[1] + "','" + values[2] + "','" + values[3] + "');";
 			} else if (table.equals("nhanvien")) {
-				sqlcommand = sqlcommand + " values(" + "'" + values[0] + "','" + values[1] + "','" + values[2] + "','" + values[3] + "','" + values[4] + "','" + values[5] + "','" + values[6] + "','" + values[7] + "');";
+				if(values[2].equals("")) values[2] = "null";
+				else values[2] = "STR_TO_DATE(" + "'"+ values[2]+"',"+"'%d-%m-%Y')";
+				sqlcommand = sqlcommand + " values(" + "'" + values[0] + "','" + values[1] + "'," + values[2] + ",'" + values[3] + "','" + values[4] + "','" + values[5] + "','" + values[6] + "','" + values[7] + "');";
 			} else if (table.equals("khachhang")) {
 				sqlcommand = sqlcommand + " values (" + "'" + values[0] + "','" + values[1] + "','" + values[2] + "','" + values[3] + "','" + values[4] + "','" + values[5] + "','" + values[6] + "');";
 			} else if (table.equals("hoadon")) {
-				sqlcommand = sqlcommand + table + " values (" + "'" + values[0] + "','" + values[1] + "','" + values[2] + "','" + values[3] + "','" + values[4] + "');";
+				if(values[2].equals("")) values[2] = "null";
+				else values[2] = "STR_TO_DATE(" + "'"+ values[2]+"',"+"'%d-%m-%Y')";
+				//sqlcommand = sqlcommand + " values (" + "'" + values[0] + "','" + values[1] + "','" + values[2] + "','" + values[3] + "','" + values[4] + "');";
+                                sqlcommand = sqlcommand + " values (" + "'" + values[0] + "','" + values[1] + "'," + values[2] + "," + values[3] + "," + values[4] + ");";
 			} else if (table.equals("dichvu")) {
-				sqlcommand = sqlcommand + table + " values (" + "'" + values[0] + "','" + values[1] + "','" + values[2] + "','" + values[3] + "');";
+				sqlcommand = sqlcommand + " values (" + "'" + values[0] + "','" + values[1] + "','" + values[2] + "','" + values[3] + "');";
 			} else if (table.equals("datphong")) {
-				sqlcommand = sqlcommand + table + " values (" + "'" + values[0] + "','" + values[1] + "','" + values[2] + "','" + values[3] + "','" + values[4] + "','"
+				if(values[2].equals("")) values[2] = "null";
+				else values[2] = "STR_TO_DATE(" + "'"+ values[2]+"',"+"'%d-%m-%Y')";
+				if(values[3].equals("")) values[3] = "null";
+				else values[3] = "STR_TO_DATE(" + "'"+ values[3]+"',"+"'%d-%m-%Y')";
+				sqlcommand = sqlcommand + " values (" + "'" + values[0] + "','" + values[1] + "'," + values[2] + "," + values[3] + ",'" + values[4] + "','"
 						+ values[5] + "','" + values[6] + "');";
 			} else if (table.equals("chitietdichvu")) {
-				sqlcommand = sqlcommand + table + " values (" + "'" + values[0] + "','" + values[1] + "','" + values[2] + "','" + values[3] + "');";
+				sqlcommand = sqlcommand + " values (" + "'" + values[0] + "','" + values[1] + "','" + values[2] + "','" + values[3] + "');";
 			} else if (table.equals("chitietdatphong")) {
-				sqlcommand = sqlcommand + table + " values (" + "'" + values[0] + "','" + values[1] + "');";
+				sqlcommand = sqlcommand + " values (" + "'" + values[0] + "','" + values[1] + "');";
 			}
 			System.out.println(sqlcommand);
 			pst = connection.prepareStatement(sqlcommand);

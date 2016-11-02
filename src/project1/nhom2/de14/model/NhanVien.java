@@ -32,8 +32,8 @@ public class NhanVien {
         gioiTinh = s[3];
         soCMND = s[4];
         diaChi = s[5];
-        SDT = s[6];
-        chucVu = s[7];
+        SDT = s[7];
+        chucVu = s[6];
     }
     
     public String getMaNV() {
@@ -112,8 +112,8 @@ public class NhanVien {
         values[3] = gioiTinh;
         values[4] = soCMND;
         values[5] = diaChi;
-        values[6] = SDT;
-        values[7] = chucVu;
+        values[7] = SDT;
+        values[6] = chucVu;
         
         return values;
     }
